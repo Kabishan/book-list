@@ -118,10 +118,9 @@ bookList.addEventListener('click', function (e) {
 
   /* Retrieve ISBN number and pass off for deletion of that book */
   if (e.target.className === 'delete') {
+    ui.showAlert('Book deleted...', 'success');
     Store.deleteBook(e.target.parentElement.previousElementSibling.textContent);
   }
-
-  ui.showAlert('Book deleted...', 'success');
 
   e.preventDefault();
 });
